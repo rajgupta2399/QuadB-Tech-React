@@ -50,7 +50,7 @@ const Home = () => {
 
   return (
     <div
-      className={`sm:px-10 px-2 sm:py-2 py-4 relative transition-all ${
+      className={`sm:px-10 mx-5 sm:py-2 py-4 relative transition-all ${
         selectedTask ? "mr-80" : ""
       }`}
     >
