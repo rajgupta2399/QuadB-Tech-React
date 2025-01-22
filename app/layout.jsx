@@ -15,8 +15,8 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Drag-to-Resize Sidebar",
-  description: "Drag-to-Resize Sidebar built with shadcn-ui",
+  title: "QuadB Tech React",
+  description: "QuadB Tech React Task Management",
 };
 
 export default function RootLayout({ children }) {
