@@ -92,6 +92,10 @@ The application follows a mobile-first approach with three main breakpoints:
 
 Layout adjustments are handled through Tailwind CSS classes, utilizing both Grid and Flexbox for optimal component arrangement.
 
+## Hosted Link
+
+<a href="https://quadbtechreact.netlify.app/">QuadB Tech</a>
+
 ## 🤝 Contributing
 
 1. Fork the repository
