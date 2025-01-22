@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { ChevronDown, X } from "lucide-react";
+import { ChevronDown, X, Trash } from "lucide-react";
 import {
   addTask,
   updateTaskPriority,
   toggleTaskCompletion,
 } from "@/store/tasksSlice";
+import { deleteTask } from "@/store/tasksSlice";
 import { Repeat } from "lucide-react";
 import { Bell } from "lucide-react";
 
@@ -34,6 +35,12 @@ const Home = () => {
       setTaskName("");
       setTaskDate("");
     }
+  };
+
+  // Inside your component
+  const handleDeleteTask = (id) => {
+    dispatch(deleteTask(id)); // Ensure you have a `deleteTask` action in your `tasksSlice`
+    setSelectedTask(null); // Close the sidebar after deletion
   };
 
   const handleUpdateTask = (id, updatedTask) => {
@@ -280,6 +287,15 @@ const Home = () => {
             className="w-full bg-blue-500 text-white py-3 rounded-md shadow-md hover:bg-blue-600 transition"
           >
             Save Changes
+          </button>
+
+          {/* Delete Icon */}
+          <button
+            onClick={() => handleDeleteTask(selectedTask.id)}
+            className="mt-6 w-full bg-red-500 text-white py-3 rounded-md shadow-md hover:bg-red-600 transition flex justify-center items-center gap-2"
+          >
+            <Trash className="w-5 h-5" />
+            Delete Task
           </button>
         </div>
       )}
